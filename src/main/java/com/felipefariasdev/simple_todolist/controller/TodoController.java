@@ -21,6 +21,10 @@ public class TodoController {
     public List<Todo> findAll(){
         return todoService.findAll();
     }
+    @GetMapping(value = "/{id}")
+    public Todo findById(@PathVariable("id") Long id){
+        return todoService.findById(id);
+    }
 
     @PutMapping
     public List<Todo> update(@RequestBody Todo todo){
