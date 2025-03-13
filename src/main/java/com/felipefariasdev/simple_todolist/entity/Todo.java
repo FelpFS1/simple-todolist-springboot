@@ -14,7 +14,11 @@ public class Todo implements Serializable {
     private Boolean isCompleted;
     private Integer priority;
 
-    public Todo(String description, Boolean isCompleted,  Integer priority) {
+    public Todo() {
+    }
+
+    public Todo(Long id,String description, Boolean isCompleted, Integer priority) {
+        this.id = id;
         this.isCompleted = isCompleted;
         this.description = description;
         this.priority = priority;
@@ -42,5 +46,13 @@ public class Todo implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
