@@ -70,14 +70,14 @@ Para fazer as requisições HTTP abaixo, foi utilizada a ferramenta [httpie](htt
 
 - Criar Tarefa 
 ```
-$ http POST :8080/todos  descricao="Desc Todo 1" prioridade=1
+$ http POST :8080/todos  description="Desc Todo 1" priority=1
 
 [
   {
-    "descricao": "Desc Todo 1",
+    "description": "Desc Todo 1",
     "id": 1,
-    "prioridade": 1,
-    "realizado": false
+    "priority": 1,
+    "completed": false
   }
 ]
 ```
@@ -88,24 +88,24 @@ $ http GET :8080/todos
 
 [
   {
-    "descricao": "Desc Todo 1",
+    "description": "Desc Todo 1",
     "id": 1,
-    "prioridade": 1,
-    "realizado": false
+    "priority": 1,
+    "completed": false
   }
 ]
 ```
 
 - Atualizar Tarefa
 ```
-$ http PUT :8080/todos/1  descricao="Desc Todo 1 Up" prioridade=2
+$ http PUT :8080/todos/1  description="Desc Todo 1 Up" priority=2
 
 [
   {
-    "descricao": "Desc Todo 1 Up",
+    "description": "Desc Todo 1 Up",
     "id": 1,
-    "prioridade": 2,
-    "realizado": false
+    "priority": 2,
+    "completed": false
   }
 ]
 ```
