@@ -19,7 +19,7 @@ API simples para gerenciar tarefas (CRUD), feita somente para estudos
 
 ## Práticas adotadas
 
-- SOLID, DRY,
+- SOLID, DRY
 - API REST
 - Consultas com Spring Data JPA
 - Injeção de Dependências
