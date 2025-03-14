@@ -1,6 +1,7 @@
 package com.felipefariasdev.simple_todolist.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 import java.io.Serializable;
 
@@ -10,6 +11,7 @@ public class Todo implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
     private String description;
     private Boolean isCompleted;
     private Integer priority;
@@ -17,8 +19,7 @@ public class Todo implements Serializable {
     public Todo() {
     }
 
-    public Todo(Long id,String description, Boolean isCompleted, Integer priority) {
-        this.id = id;
+    public Todo(String description, Boolean isCompleted, Integer priority) {
         this.isCompleted = isCompleted;
         this.description = description;
         this.priority = priority;
